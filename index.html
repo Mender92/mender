@@ -5,36 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Domen – UX Beginner</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #2CFFF8 !important;
       font-family: "Courier New", Courier, monospace !important;
       color: #FF2AD1 !important;
     }
+    h1 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+    }
   </style>
 </head>
 <body class="p-6">
 
-  <!-- Menu -->
-  <nav class="flex justify-center space-x-8 mb-8">
-    <button id="btn-home" class="px-4 py-2 rounded hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-600 font-semibold">Home</button>
-    <button id="btn-about" class="px-4 py-2 rounded hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-600 font-semibold">About me</button>
-    <button id="btn-work" class="px-4 py-2 rounded hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-600 font-semibold">My work</button>
-  </nav>
+  <!-- Top Bar with Logo, Nav, and Button -->
+  <header class="flex justify-between items-center mb-12 max-w-5xl mx-auto">
+    <!-- Left: Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/240px-Placeholder_view_vector.svg.png" alt="Logo" class="w-12 h-12" />
+
+    <!-- Center: Nav -->
+    <nav class="space-x-6 text-lg font-semibold">
+      <button id="btn-home" class="hover:underline">Home</button>
+      <button id="btn-about" class="hover:underline">About me</button>
+      <button id="btn-work" class="hover:underline">My work</button>
+    </nav>
+
+    <!-- Right: Get in touch button -->
+    <button class="border border-current px-4 py-1 rounded font-semibold hover:bg-pink-500 hover:text-white transition">
+      Get in touch
+    </button>
+  </header>
 
   <!-- Content Sections -->
-  <div class="max-w-2xl mx-auto">
+  <main class="max-w-3xl mx-auto">
 
+    <!-- Home Section -->
     <section id="home" class="content-section">
-      <h1 class="text-4xl font-bold mb-4">Hi, I'm Domen 👋</h1>
-      <p class="mb-6 text-lg">
+      <h1 class="text-4xl mb-4">Hi, I'm Domen 👋</h1>
+      <p class="text-lg">
         I'm exploring the world of UX design — this site is my learning playground. Over time, I plan to shape it into something more polished.
       </p>
-      <button class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded font-semibold">Get in touch</button>
     </section>
 
+    <!-- About Me Section -->
     <section id="about" class="content-section hidden">
-      <h2 class="text-2xl font-semibold mb-4">What I'm Doing</h2>
+      <h1 class="text-3xl mb-4">What I'm Doing</h1>
       <ul class="list-disc list-inside space-y-1">
         <li>Learning UX design fundamentals (Coursera & real-life projects)</li>
         <li>Practicing by building this page from scratch</li>
@@ -42,17 +59,18 @@
       </ul>
     </section>
 
+    <!-- My Work Section -->
     <section id="work" class="content-section hidden">
-      <h2 class="text-2xl font-semibold mb-4">What's Next?</h2>
+      <h1 class="text-3xl mb-4">What's Next?</h1>
       <p>
         I’ll add case studies, design ideas, and maybe even some experiments as I grow. This is a snapshot of my journey, not a final product.
       </p>
     </section>
 
-  </div>
+  </main>
 
+  <!-- Script to Switch Sections -->
   <script>
-    // Simple tab switching logic
     const buttons = {
       home: document.getElementById('btn-home'),
       about: document.getElementById('btn-about'),
@@ -65,19 +83,16 @@
     };
 
     function showSection(section) {
-      // Hide all sections
       Object.values(sections).forEach(s => s.classList.add('hidden'));
-      // Show the selected section
       sections[section].classList.remove('hidden');
     }
 
-    // Set event listeners
     buttons.home.addEventListener('click', () => showSection('home'));
     buttons.about.addEventListener('click', () => showSection('about'));
     buttons.work.addEventListener('click', () => showSection('work'));
 
-    // Show home by default on page load
-    showSection('home');
+    showSection('home'); // default view
   </script>
+
 </body>
 </html>
