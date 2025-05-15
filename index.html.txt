@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domen – UX Beginner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans p-6">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-4xl font-bold mb-2">Hi, I'm Domen 👋</h1>
+    <p class="text-lg mb-6 text-gray-700">
+      I'm exploring the world of UX design — this site is my learning playground. Over time, I plan to shape it into something more polished.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">👨‍💻 What I'm Doing</h2>
+    <ul class="list-disc list-inside mb-4 text-gray-700">
+      <li>Learning UX design fundamentals (Coursera & real-life projects)</li>
+      <li>Practicing by building this page from scratch</li>
+      <li>Slowly understanding HTML, CSS, and usability principles</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-6 mb-2">🔭 What's Next?</h2>
+    <p class="mb-6 text-gray-700">
+      I’ll add case studies, design ideas, and maybe even some experiments as I grow. This is a snapshot of my journey, not a final product.
+    </p>
+
+    <footer class="text-sm text-gray-500 border-t pt-4">
+      © 2025 Domen. Made with curiosity, caffeine, and Tailwind CSS.
+    </footer>
+  </div>
+</body>
+</html>
